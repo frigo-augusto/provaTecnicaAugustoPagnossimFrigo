@@ -13,7 +13,12 @@ class Question extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('question', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->boolean('correct');
+            $table->float('weight');
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class Question extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('question');
     }
 }

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +15,5 @@ use App\Http\Controllers\ViewController;
 |
 */
 
-Route::get('/register', [ViewController::class, 'register']);
+Route::get('/register-view', [ViewController::class, 'register'])->name('view.register');
+Route::get('/register', [RegisterController::class, 'register'])->name('register');
