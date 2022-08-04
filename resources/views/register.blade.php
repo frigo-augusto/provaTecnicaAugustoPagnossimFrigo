@@ -22,7 +22,6 @@
     }
 
     .form-label{
-        margin-bottom: 100px;
         font-size: 12px;
     }
 
@@ -30,17 +29,17 @@
 </style>
 <body>
     <div id = 'register'>
-        <form method = 'GET' action ="{{route('register')}}">>
+        <form method = 'GET' action ="{{route('register')}}">
             <label for='name' class = form-label>Digite aqui a pergunta a ser cadastrada</label><br>
             <input type='text' class = 'form-text' id = 'question-title' name='question-title'><br>
             <label for='correct-option' class = form-label>Selecione a opção verdadeira</label><br>
-            <select id = 'correct-option' name = 'right-option' class = 'form-text'>
-                <option value = 'true'>Verdadeiro</option>
-                <option value = 'false'>Falso</option>
+            <select id = 'correct-option' name = 'correct-option' class = 'form-text'>
+                <option value = '1'>Verdadeiro</option>
+                <option value = '0'>Falso</option>
             </select><br>
             <label for = 'question-weight' class = 'form-label'>Digite o peso da questão</label><br>
             <input type = 'text' class = 'form-text' id = 'question-weight' name = 'question-weight'><br>
-            <input type = 'submit'>
+            <input type = 'submit' label = 'Cadastrar'>
         </form>
     </div>
     

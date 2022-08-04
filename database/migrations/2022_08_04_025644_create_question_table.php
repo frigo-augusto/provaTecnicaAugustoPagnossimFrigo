@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Question extends Migration
+class CreateQuestionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -18,6 +18,7 @@ class Question extends Migration
             $table->string('title');
             $table->boolean('correct');
             $table->float('weight');
+            $table->foreign('questionary_id')->references('id')->on('questionary');
         });
     }
 
