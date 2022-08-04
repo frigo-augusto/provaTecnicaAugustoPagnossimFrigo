@@ -16,6 +16,7 @@ class CreateQuestionTable extends Migration
         Schema::create('question', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->integer('questionary_id')->unsigned();
             $table->boolean('correct');
             $table->float('weight');
             $table->foreign('questionary_id')->references('id')->on('questionary');
