@@ -13,12 +13,15 @@
         <div> {{$questions[0]->title}}</div>
         <input type = 'radio' class = 'form-input' name = 'q1-option' value = '1'>Verdadeiro</input><br>
         <input type = 'radio' class = 'form-input' name = 'q1-option' value ='0'>Falso</input><br>
+        <input type = 'hidden' class = 'form-input' name = 'q1-option-id' value = <?php echo $questions[0]->id;?>>
         <div> {{$questions[1]->title}}</div>
         <input type = 'radio' class = 'form-input' name = 'q2-option' value = '1'>Verdadeiro</input><br>
         <input type = 'radio' class = 'form-input' name = 'q2-option' value ='0'>Falso</input><br>
+        <input type = 'hidden' class = 'form-input' name = 'q2-option-id' value = <?php echo $questions[1]->id;?>>
         <div> {{$questions[2]->title}}</div>
         <input type = 'radio' class = 'form-input' name = 'q3-option' value = '1'>Verdadeiro</input><br>
         <input type = 'radio' class = 'form-input' name = 'q3-option' value ='0'>Falso</input><br-->
+        <input type = 'hidden' class = 'form-input' name = 'q3-option-id' value = <?php echo $questions[2]->id;?>>
 
         <input type = 'reset' value = 'Cancelar'>
         <input type = 'submit' value = 'Responder'>
