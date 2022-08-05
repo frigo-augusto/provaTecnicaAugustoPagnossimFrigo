@@ -7,7 +7,12 @@ use Illuminate\Support\Facades\DB;
 
 class QuestionController extends Controller
 {
-    public function get3Questions(){
-        DB::select('')
+    public function getQuestionary(){
+        $questions = DB::select('select title, id from question');
+        return view('questionary', ['questions' => $questions]);
+    }
+
+    public function submitQuestionary(Request $request){
+        return $request;
     }
 }

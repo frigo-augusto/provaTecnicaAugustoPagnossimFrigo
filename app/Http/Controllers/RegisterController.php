@@ -10,10 +10,14 @@ class RegisterController extends Controller
 
 
     public function register(Request $request){
-        DB::insert('insert into question (title, correct, weight) values (?, ?, ?)', array( 
-            $request['question-title'], 
-            boolval($request['correct-option']), 
-            $request['question-weight']));
+        DB::delete('delete from question');
+        for($i = 0; $i < 3; $i++){
+            DB::insert('insert into question (title, correct, weight) values (?, ?, ?)', array( 
+                $request['question-title'][$i], 
+                boolval($request['correct-option'][$i]), 
+                $request['question-weight'][$i]));
+        }
+
         return $request;
     }
     

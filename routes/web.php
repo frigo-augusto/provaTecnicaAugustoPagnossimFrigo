@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\QuestionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +17,6 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get('/register-view', [ViewController::class, 'register'])->name('view.register');
-Route::get('/register', [RegisterController::class, 'register'])->name('register');
+Route::get('/register', [RegisterController::class, 'register'])->name('post.register');
+Route::get('/see-form', [QuestionController::class, 'getQuestionary'])->name('get.questionary');
+Route::get('/submit-questionary', [QuestionController::class, 'submitQuestionary'])->name('post.questionary');
