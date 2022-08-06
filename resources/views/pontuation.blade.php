@@ -10,7 +10,8 @@
     <h1>Ranking</h1><br>
     <h2>Você acertou {{$nHits}} questões!</h2> <br>
     @foreach($records as $record)
-    {{$record->name}} {{$record->pontuation}}<br>
+    Nome: {{$record->name}}<br> 
+    Pontuação:{{$record->pontuation}}<br><br>
     @endforeach
     
 </body>
