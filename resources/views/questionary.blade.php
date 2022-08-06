@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="get" action="{{route('post.questionary')}}">
+    <form method="GET" action="{{route('post.questionary')}}">
         <label for = 'name' class = 'form-label'>Digite seu nome</label><br>
         <input type = 'text' class = 'form-input' id = 'name' name='name'>
         <div> {{$questions[0]->title}}</div>

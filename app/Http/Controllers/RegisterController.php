@@ -18,7 +18,7 @@ class RegisterController extends Controller
                 $request['question-weight'][$i]));
         }
 
-        return $request;
+        return redirect('/see-form');
     }
     
 }

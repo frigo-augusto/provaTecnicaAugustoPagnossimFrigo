@@ -25,6 +25,7 @@
 
     .form-input{
         border: 1px solid;
+        font-size: 20px;
         border-radius: 5px;
         margin-bottom: 20px;
     }
@@ -41,16 +42,18 @@
         justify-content: flex-end;
     }
 
+    
+
 
 
 </style>
 <body>
     <div id = 'register'>
-        <form method = 'GET' action ="{{route('post.register')}}">
+        <form method = 'get' action ="{{route('post.register')}}">
             <div id = question-1>
                 <h1> Digite aqui a pergunta 1</h1><br>
                 <label for='name' class = form-label>Digite aqui a pergunta a ser cadastrada</label><br>
-                <input type='text' class = 'form-input' id = 'question-title' name='question-title[]'><br>
+                <input type='text' class = 'form-input' id = 'question-title' name='question-title[]' size=><br>
                 <label for='correct-option' class = form-label>Selecione a opção verdadeira</label><br>
                 <select id = 'correct-option' name = 'correct-option[]' class = 'form-input'>
                     <option value = '1'>Verdadeiro</option>
